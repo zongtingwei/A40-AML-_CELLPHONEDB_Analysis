@@ -33,10 +33,15 @@ map mouse to human in h5ad file
 ```bash
 python map_mm_to_hs_from_mgi_v4.py \
   --mgi_rpt /root/autodl-tmp/BGI/mgi/HOM_MouseHumanSequence.rpt.txt \
-  --in_h5ad /root/autodl-tmp/BGI/STOmics/spatial_data/bin20_h5ad_10.30/BM26_A40_C05094F1_bin20_annotation.h5ad \
-  --out_h5ad /root/autodl-tmp/BGI/STOmics/spatial_data/bin20_h5ad_10.30/BM26_A40_C05094F1_hs_symbol.h5ad \
-  --map_csv /root/autodl-tmp/BGI/STOmics/cpdb_inputs/mm2hs_from_mgi.csv \
+  --in_h5ad .../your_file.h5ad \
+  --out_h5ad .../your_file.h5ad \
+  --map_csv .../mm2hs_from_mgi.csv \
   --drop_unmapped
+```
+
+download cpdb datasets
+```bash
+python download_cpdb_db.py --target-dir /root/autodl-tmp/BGI/cpdb_db --version v5.0.0
 ```
 
 
