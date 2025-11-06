@@ -44,6 +44,35 @@ download cpdb datasets
 python download_cpdb_db.py --target-dir /root/autodl-tmp/BGI/cpdb_db --version v5.0.0
 ```
 
+```bash
+mkdir -p /root/autodl-tmp/BGI/cpdb_db/releases/v5.0.0
+```
+
+```bash
+mv /root/autodl-tmp/BGI/cpdb_db/cellphonedb.zip /root/autodl-tmp/BGI/cpdb_db/releases/v5.0.0/
+```
+
+```bash
+rm -f /root/autodl-tmp/BGI/cpdb_db/*.csv
+rm -rf /root/autodl-tmp/BGI/cpdb_db/sources
+```
+
+run cpdb stat_analysis
+```bash
+python run_cpdb_stat.py \
+  --h5ad /root/autodl-tmp/BGI/STOmics/spatial_data/bin20_h5ad_10.30/BM26_A40_C05094F1_hs_symbol.h5ad \
+  --meta /root/autodl-tmp/BGI/STOmics/cpdb_inputs/meta_A40.txt \
+  --cpdb_dir /root/autodl-tmp/BGI/cpdb_db \
+  --cpdb_version v5.0.0 \
+  --outdir /root/autodl-tmp/BGI/STOmics/cpdb_out/A40 \
+  --counts_data hgnc_symbol \
+  --iterations 1000 \
+  --threshold 0.1 \
+  --threads 64 \
+  --score_interactions
+```
+
+
 
 
 
