@@ -22,7 +22,7 @@ make cpdb_meta from h5ad file
 python make_cpdb_meta_from_h5ad.py \
   --h5ad .../your_file.h5ad \
   --cluster-col cluster \
-  --out /root/autodl-tmp/BGI/STOmics/cpdb_inputs/meta_A40.txt
+  --out .../meta_A40.txt
 ```
 download the MGI mouse and human homologs
 ![step1](images/step1.png)
@@ -32,7 +32,7 @@ download the MGI mouse and human homologs
 map mouse to human in h5ad file
 ```bash
 python map_mm_to_hs_from_mgi_v4.py \
-  --mgi_rpt /root/autodl-tmp/BGI/mgi/HOM_MouseHumanSequence.rpt.txt \
+  --mgi_rpt .../mgi/HOM_MouseHumanSequence.rpt.txt \
   --in_h5ad .../your_file.h5ad \
   --out_h5ad .../your_file.h5ad \
   --map_csv .../mm2hs_from_mgi.csv \
@@ -41,7 +41,7 @@ python map_mm_to_hs_from_mgi_v4.py \
 
 download cpdb datasets
 ```bash
-python download_cpdb_db.py --target-dir /root/autodl-tmp/BGI/cpdb_db --version v5.0.0
+python download_cpdb_db.py --target-dir .../cpdb_db --version v5.0.0
 ```
 
 ```bash
@@ -60,11 +60,11 @@ rm -rf /root/autodl-tmp/BGI/cpdb_db/sources
 run cpdb stat_analysis
 ```bash
 python run_cpdb_stat.py \
-  --h5ad /root/autodl-tmp/BGI/STOmics/spatial_data/bin20_h5ad_10.30/BM26_A40_C05094F1_hs_symbol.h5ad \
-  --meta /root/autodl-tmp/BGI/STOmics/cpdb_inputs/meta_A40.txt \
-  --cpdb_dir /root/autodl-tmp/BGI/cpdb_db \
+  --h5ad .../your_file.h5ad \
+  --meta .../cpdb_inputs/meta_A40.txt \
+  --cpdb_dir .../cpdb_db \
   --cpdb_version v5.0.0 \
-  --outdir /root/autodl-tmp/BGI/STOmics/cpdb_out/A40 \
+  --outdir .../cpdb_out/A40 \
   --counts_data hgnc_symbol \
   --iterations 1000 \
   --threshold 0.1 \
