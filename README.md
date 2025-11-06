@@ -17,6 +17,24 @@ install cellphonedb
 pip install -U cellphonedb
 ```
 
+make cpdb_meta from h5ad file
+```bash
+python make_cpdb_meta_from_h5ad.py \
+  --h5ad .../your_file.h5ad \
+  --cluster-col cluster \
+  --out /root/autodl-tmp/BGI/STOmics/cpdb_inputs/meta_A40.txt
+```
+
+map mouse to human in h5ad file
+```bash
+python make_cpdb_meta_from_h5ad.py \
+  --h5ad .../your_file.h5ad \
+  --cluster-col cluster \
+  --out /root/autodl-tmp/BGI/STOmics/cpdb_inputs/meta_A40.txt
+```
+
+
+
 
 
 
