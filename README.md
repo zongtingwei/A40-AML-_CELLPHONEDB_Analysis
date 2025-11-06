@@ -45,16 +45,16 @@ python download_cpdb_db.py --target-dir .../cpdb_db --version v5.0.0
 ```
 
 ```bash
-mkdir -p /root/autodl-tmp/BGI/cpdb_db/releases/v5.0.0
+mkdir -p .../cpdb_db/releases/v5.0.0
 ```
 
 ```bash
-mv /root/autodl-tmp/BGI/cpdb_db/cellphonedb.zip /root/autodl-tmp/BGI/cpdb_db/releases/v5.0.0/
+mv .../cpdb_db/cellphonedb.zip .../cpdb_db/releases/v5.0.0/
 ```
 
 ```bash
-rm -f /root/autodl-tmp/BGI/cpdb_db/*.csv
-rm -rf /root/autodl-tmp/BGI/cpdb_db/sources
+rm -f .../cpdb_db/*.csv
+rm -rf .../cpdb_db/sources
 ```
 
 run cpdb stat_analysis
