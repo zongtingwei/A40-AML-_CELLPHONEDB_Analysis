@@ -66,10 +66,11 @@ python run_cpdb_stat.py \
   --cpdb_version v5.0.0 \
   --outdir .../cpdb_out/A40 \
   --counts_data hgnc_symbol \
-  --iterations 1000 \
-  --threshold 0.1 \
+  --iterations 5000 \
+  --threshold 0.01 \
   --threads 64 \
-  --score_interactions
+  --score_interactions \
+  --microenvs /root/autodl-tmp/BGI/STOmics/cpdb_inputs/microenvs_A40.txt
 ```
 
 
