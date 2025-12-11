@@ -25,7 +25,7 @@ python make_cpdb_meta_from_h5ad.py \
   --out .../meta_A40.txt
 ```
 download the MGI mouse and human homologs
-link:https://www.informatics.jax.org/
+/link:https://www.informatics.jax.org/
 ![step1](images/step1.png)
 ![step2](images/step2.png)
 ![step3](images/step3.png)
